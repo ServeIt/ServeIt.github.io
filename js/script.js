@@ -1,10 +1,6 @@
 (function($){
   // Search
-  var windowHeight = $(window).height()*0.5;
-  var pic1 = $('#pic1').offset().top - windowHeight;
-  var pic2 = pic1 + 226;
-  var pic3 = pic2 + 226;
-  
+
   var $searchWrap = $('#search-form-wrap'),
     isSearchAnim = false,
     searchAnimDuration = 200;
@@ -31,35 +27,6 @@
       $('.search-form-input').focus();
     });
   });
-
-
-    $(document).scroll(function(){
-      var top = $(document).scrollTop();
-
-      if(top > pic1 && $('#pic1').css('opacity') < 1){
-        $('#pic1').animate({
-          opacity: 1,
-          'padding-top': "0px"
-        },1000);
-      }
-
-      if(top > pic2 && $('#pic2').css('opacity') < 1){
-        $('#pic2').animate({
-          opacity: 1,
-          'padding-top': "0px"
-        },1000);
-      }
-
-      if(top > pic3 && $('#pic3').css('opacity') < 1){
-        $('#pic3').animate({
-          opacity: 1,
-          'padding-top': "0px"
-        },1000);
-      }
-  });
-
-
- 
 
   $('.search-form-input').on('blur', function(){
     startSearchAnim();

@@ -47,6 +47,8 @@
    	
 		<div>
 			
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
 <div class="slogen">
 	<img width="200px" class="slogen-pic"src="/logo.png">
 	<h1>
@@ -78,6 +80,38 @@
 	<img id="pic3" class="slogen-pic"src="/join.png">
 	</div>
 </div>
+<script type="text/javascript">
+	  var windowHeight = $(window).height()*0.5;
+  var pic1 = $('#pic1').offset().top - windowHeight;
+  var pic2 = pic1 + 226;
+  var pic3 = pic2 + 226;
+  
+
+    $(document).scroll(function(){
+      var top = $(document).scrollTop();
+
+      if(top > pic1 && $('#pic1').css('opacity') < 1){
+        $('#pic1').animate({
+          opacity: 1,
+          'padding-top': "0px"
+        },1000);
+      }
+
+      if(top > pic2 && $('#pic2').css('opacity') < 1){
+        $('#pic2').animate({
+          opacity: 1,
+          'padding-top': "0px"
+        },1000);
+      }
+
+      if(top > pic3 && $('#pic3').css('opacity') < 1){
+        $('#pic3').animate({
+          opacity: 1,
+          'padding-top': "0px"
+        },1000);
+      }
+  });
+</script>
 		</div>
 	
     <div class="mb-search">
