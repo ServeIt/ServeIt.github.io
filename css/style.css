@@ -195,6 +195,32 @@ body {
   filter: alpha(opacity=0);
   padding-top: 50px;
 }
+@media screen and (max-width: 559px) {
+  .slogen h1 {
+    font-size: 300%;
+  }
+  .slogen h2 {
+    font-size: 150%;
+  }
+  .slogen p {
+    font-size: 120%;
+    padding: 0 3em;
+  }
+  .slogen-pics {
+    width: 80%;
+  }
+  .slogen-pics h1 {
+    margin: 1em 0 1em;
+  }
+  .slogen-pics #pic1,
+  .slogen-pics #pic2,
+  .slogen-pics #pic3 {
+    padding-top: 1em;
+  }
+  .slogen-pics .pic-contain {
+    height: 130px;
+  }
+}
 a {
   color: #e61a94;
   text-decoration: none;
@@ -639,11 +665,6 @@ pre .deletion {
   font-size: 80%;
   margin-bottom: 5px;
 }
-@media screen and (max-width: 559px) {
-  .sidenav {
-    visibility: hidden;
-  }
-}
 #main {
   width: 75%;
   float: left;
@@ -932,6 +953,14 @@ margin-bottom
 }
 .article-tag-list-item:before {
   content: "#";
+}
+@media screen and (max-width: 559px) {
+  .sidenav {
+    display: none;
+  }
+  #main {
+    width: 100%;
+  }
 }
 .article-gallery {
   background: #000;
